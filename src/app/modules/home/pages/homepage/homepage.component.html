@@ -1,0 +1,17 @@
+<div class="centerText"><h1>Small Batch Devs</h1></div>
+<div>
+  <button (click)="editPost()">New Post</button>
+</div>
+<div *ngFor="let blog of blogs">
+  <div class="centerText"><h3>{{blog.title}}</h3></div>
+  <div>
+    <p>
+      {{blog.body | slice:0:149}}...
+    </p>
+  </div>
+  <div>
+    <button (click)="readPost(blog.uid)">Read</button>
+    <button (click)="editPost(blog.uid)">Edit</button>
+  </div>
+  <hr>
+</div>
